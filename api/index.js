@@ -2,11 +2,11 @@ let express = require('express');
 let app = express();
 let fs = require("fs");
 
-app.get('/', function (req, res) {
-  res.redirect('https://github.com/kokonut27/replitdge')
-})
+app.get('/', (req, res) => {
+  res.redirect('https://github.com/kokonut27/replitdge');
+});
 
-app.get('/api', function (req, res) {
+app.get('/api', (req, res) => {
   fs.readFile("themes.json", 'utf8', function (err, data) {
     res.end( data );
   });
