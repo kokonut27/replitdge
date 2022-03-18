@@ -14,6 +14,6 @@ app.get('/api', (req, res) => {
   });
 })
 
-app.listen(8080, function () {
+app.listen(8080, () => {
   console.log('replitdge is now running :D');
 })
