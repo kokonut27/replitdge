@@ -1,18 +1,15 @@
 {
-  "1": {
-    "name": "light-theme",
+  "light": {
     "bg-color": "white",
     "txt-color": "black"
   },
   
-  "2": {
-    "name": "dark-theme",
+  "dark": {
     "bg-color": "black",
     "txt-color": "white"
   },
 
-  "3": {
-    "name": "midnight",
+  "midnight": {
     "bg-color": "navy",
     "txt-color": "silver"
   }

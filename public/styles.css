@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+	--transition-speed: 0.2s;
+}
+
+* {
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+html, body {
+  font-family: 'Oswald', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+.readme-badge {
+  border: solid 0.5px #e4e2e2;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
