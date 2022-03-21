@@ -2,7 +2,22 @@ const express = require('express');
 const app = express();
 const fs = require("fs");
 const https = require('https');
+import ReplAPI from 'replapi-it';
+const replapi = ReplAPI({
+  username: 'JBloves27'
+});
 
+/*
+const myUser = new replapi.User("RayhanADev");
+
+async function getCycles() {
+  let info = await myUser.userGraphQLDataFull();
+  let cycles = info.karma; // Yep, it's karma!
+  console.log(`User Cycles: ${cycles}`)
+}
+
+getCycles()
+*/
 
 app.use(express.static(__dirname + '/public'));
 
@@ -39,8 +54,11 @@ app.get('/api', (req, res) => {
     }
   });
 
-  
-})
+  res.render('api/api.ejs', {
+    username: null,
+    theStats: null
+  });
+});
 
 app.listen(8080, () => {
   console.log('replitdge is now running :D');

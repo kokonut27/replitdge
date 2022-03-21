@@ -16,6 +16,7 @@ html, body {
 
 .readme-badge {
   border: solid 0.5px #e4e2e2;
+  border-radius: 5px;
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: 2vw;
