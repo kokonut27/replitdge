@@ -27,7 +27,7 @@ app.get('/api', (req, res) => {
   });
 
   req2.on('error', error => {
-    res.send('<h1>Something went wrong! Try again later!</h1>');
+    res.send(`<h1>Something went wrong! Try again later!</h1><h6>${error}</h6>`);
   });
   
   fs.readFile("themes.json", 'utf8', (err, data) => {
@@ -40,12 +40,12 @@ app.get('/api', (req, res) => {
   });
 
   res.render('api/api.ejs', {
-    username: null,
+    username: username,
     theStats: null,
-    grade: null
+    grade: "B+"
   });
 });
 
 app.listen(8080, () => {
   console.log('replitdge is now running :D');
-})
+});
