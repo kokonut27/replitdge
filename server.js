@@ -2,22 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require("fs");
 const https = require('https');
-import ReplAPI from 'replapi-it';
-const replapi = ReplAPI({
-  username: 'JBloves27'
-});
 
-/*
-const myUser = new replapi.User("RayhanADev");
-
-async function getCycles() {
-  let info = await myUser.userGraphQLDataFull();
-  let cycles = info.karma; // Yep, it's karma!
-  console.log(`User Cycles: ${cycles}`)
-}
-
-getCycles()
-*/
 
 app.use(express.static(__dirname + '/public'));
 
@@ -44,6 +29,8 @@ app.get('/api', (req, res) => {
   req2.on('error', error => {
     res.send('<h1>Something went wrong! Try again later!</h1>');
   });
+
+  if (theme == undefined)
   
   fs.readFile("themes.json", 'utf8', (err, data) => {
     let themes = JSON.parse( data );
