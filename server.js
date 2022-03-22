@@ -29,8 +29,6 @@ app.get('/api', (req, res) => {
   req2.on('error', error => {
     res.send('<h1>Something went wrong! Try again later!</h1>');
   });
-
-  if (theme == undefined)
   
   fs.readFile("themes.json", 'utf8', (err, data) => {
     let themes = JSON.parse( data );
@@ -43,7 +41,8 @@ app.get('/api', (req, res) => {
 
   res.render('api/api.ejs', {
     username: null,
-    theStats: null
+    theStats: null,
+    grade: null
   });
 });
 
