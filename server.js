@@ -4,13 +4,15 @@ const fs = require("fs");
 const https = require('https');
 
 
-app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
+
 
 
 app.get('/', (req, res) => {
   res.redirect('https://github.com/kokonut27/replitdge');
 });
+
 
 app.get('/api', (req, res) => {
   let username = req.query.username;
@@ -46,6 +48,7 @@ app.get('/api', (req, res) => {
     grade: "B+"
   });
 });
+
 
 app.listen(8080, () => {
   console.log('replitdge is now running :D');
