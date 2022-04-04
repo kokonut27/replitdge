@@ -51,5 +51,5 @@ app.get('/api', (req, res) => {
 
 
 app.listen(8080, () => {
-  console.log('replitdge is now running :D');
+  console.log('replitdge is running :D');
 });
